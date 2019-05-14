@@ -12,12 +12,7 @@ namespace GuessingGame_4._22._19
             int numberGuesses = 0;
             int randomNumber = new Random().Next(1, 101);
 
-            Console.WriteLine("\nINSTRUCTIONS");
-            Console.WriteLine("You have 3 tries to guess a number between 1-100.");
-            Console.WriteLine("I will tell you if you are too high or too low or just right!");
-            Console.WriteLine("Enter 0 to return to the instructions.");
-            Console.WriteLine("Enter -1 to exit the game.");
-            Console.WriteLine("");
+            InstructionMenu();
 
             do
             {
@@ -30,11 +25,7 @@ namespace GuessingGame_4._22._19
                 }
                 else if (guess == 0)
                 {
-                    Console.WriteLine("\nINSTRUCTIONS");
-                    Console.WriteLine("You have 3 tries to guess a number between 1-100.");
-                    Console.WriteLine("I will tell you if you are too high or too low or just right!");
-                    Console.WriteLine("Enter 0 to return to the instructions.");
-                    Console.WriteLine("Enter -1 to exit the game.");
+                    InstructionMenu();
                 }
                 else if (guess == -1)
                 {
@@ -53,6 +44,17 @@ namespace GuessingGame_4._22._19
             } while (guessAgain && (numberGuesses < 3));
 
             Console.WriteLine($"\nThe number was {randomNumber}.\nThanks for playing");
+        }
+
+        static void InstructionMenu()
+        {
+            Console.WriteLine("\nINSTRUCTIONS");
+            Console.WriteLine("You have 3 tries to guess a number between 1-100.");
+            Console.WriteLine("I will tell you if you are too high or too low or just right!");
+            Console.WriteLine("Enter 0 to return to the instructions.");
+            Console.WriteLine("Enter -1 to exit the game.");
+            Console.WriteLine("");
+
         }
     }
 }
