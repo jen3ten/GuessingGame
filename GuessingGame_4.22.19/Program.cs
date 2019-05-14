@@ -52,7 +52,14 @@ namespace GuessingGame_4._22._19
                 }
             } while (guessAgain && (numberGuesses < 3));
 
-            Console.WriteLine($"\nThe number was {randomNumber}.\nThanks for playing");
+            //String interpolation
+            Console.WriteLine($"\nThe number was {randomNumber}.\nThanks for playing!");
+
+            //String concatenation
+            Console.WriteLine("The number was " + randomNumber + ".\nThanks for playing!");
+
+            //Composite formatting
+            Console.WriteLine("The numbers was {0}.\nThanks for playing!", randomNumber);
         }
     }
 }
