@@ -12,9 +12,16 @@ namespace GuessingGame_4._22._19
             int numberGuesses = 0;
             int randomNumber = new Random().Next(1, 101);
 
+            Console.WriteLine("\nINSTRUCTIONS");
+            Console.WriteLine("You have 3 tries to guess a number between 1-100.");
+            Console.WriteLine("I will tell you if you are too high or too low or just right!");
+            Console.WriteLine("Enter 0 to return to the instructions.");
+            Console.WriteLine("Enter -1 to exit the game.");
+            Console.WriteLine("");
+
             do
             {
-                Console.Write("Please guess a number: ");
+                Console.Write("Please guess a number between 1-100: ");
                 int guess = Convert.ToInt32(Console.ReadLine());
                 if (guess == randomNumber)
                 {
