@@ -7,8 +7,10 @@ namespace GuessingGame_4._22._19
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Guessing Game!\n");
-
-            bool guessAgain = true;
+            bool guessAgain; 
+            guessAgain = true;
+            //bool guessAgain = true;
+            
             int numberGuesses = 0;
             int randomNumber = new Random().Next(1, 101);
 
@@ -52,7 +54,14 @@ namespace GuessingGame_4._22._19
                 }
             } while (guessAgain && (numberGuesses < 3));
 
+            //This is string concatenation
             Console.WriteLine("\nThe number was " + randomNumber + ".\nThanks for playing!");
+
+            //This is string interpolation
+            Console.WriteLine($"\nThe number was {randomNumber}. \nThanks for playing!");
+
+            //This is composite formatting
+            Console.WriteLine("\nThe number was {0}. You guessed {1} times.\nThanks for playing!", randomNumber, numberGuesses);
         }
     }
 }
